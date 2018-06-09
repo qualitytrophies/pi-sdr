@@ -3,14 +3,11 @@ Using the Raspberry Pi as an SDR
 
 NOTE - Make sure you have an actually sufficient power supply solution - this will sometimes draw over 1.2A, idle @ 700-800mA
 
-The image is preconfigured.  It's a customised Raspbian Lite installation, snmpd is installed as well - the python code for the SDR has already been changed.  The adafruit-tft sdr is also included.
+Hardware Required :-
 
-Passwords :-
-
-  *   root      password
-  *   pi        password
-  
-you can use the image, or this is how to do it :-
+Raspberry Pi 2 or 3
+Realtek Based USB Tv Stick
+Decent power supply solution
 
 1. install Raspbian
 
@@ -21,7 +18,7 @@ you can use the image, or this is how to do it :-
 
 
 
-3. To install the rtlsdr :-
+3. To install the rtlsdr, the driver that it uses to talk with the Tv Tuner directly :-
 
 		cd ~
 		git clone git://git.osmocom.org/rtl-sdr.git
@@ -36,7 +33,7 @@ you can use the image, or this is how to do it :-
 
 
 
-4. To install the panadapter :-
+4. To install the panadapter, the display software :-
 
 		cd ~
 		git clone https://github.com/Banjopkr/WQ7Tpanadapter.git
