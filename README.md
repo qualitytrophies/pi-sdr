@@ -9,8 +9,46 @@ Raspberry Pi 2 or 3
 Realtek Based USB Tv Stick
 Decent power supply solution
 
-1. install Raspbian
+1. install Raspbian Lite
 
+		$ = user prompt, don't copy & paste as part of command
+		# = root prompt, don't copy & paste as part of command
+
+Install Raspbian Lite, with NOOOBS or direct img to microSD.
+
+Boot the Pi, login and change the passwords, update the firmware and reboot :-
+
+	login : 	pi
+	password :	raspberry
+	
+	$ sudo su
+	# passwd pi
+			enter the new password, twice
+			
+	# passwd
+			enter the new password, twice
+			
+	# rpi-update
+	# reboot
+	
+Let the Pi finish booting with the updated firmware, then login as pi and run raspi-config, to select options such as CPU/GPU memory split, overlclocking, interfacing & localisation. Make sure to enable SSH under interfacing, We will be able to use putty for the console commands. It will ask you to reboot when you are finished.
+
+	$ sudo raspi-config
+
+Now We get to making Raspbian Lite a bit more useful, with as few extras as possible. Login via putty - the IP address appears in the boot messages, making it easier - away We go !
+
+First, We update what's there, so We have a good starting position
+
+	$ sudo apt-get update
+	$ sudo apt-get dist-upgrade
+	$ sudo apt-get clean
+	$ sudo apt-get autoclean
+	
+Now We get to filling out the Raspbian Lite installation.	
+	
+	$ sudo apt-get -y install --no-install-recommends xserver-xorg xinit
+	$ sudo apt-get -y install raspberrypi-ui-mods
+	
 
 2. To install dependencies :-
 
