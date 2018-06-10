@@ -49,6 +49,19 @@ Now We get to filling out the Raspbian Lite installation.
 	$ sudo apt-get -y install --no-install-recommends xserver-xorg xinit
 	$ sudo apt-get -y install raspberrypi-ui-mods
 	
+Run raspi-config again, to set up autologin & VNC - perhaps set the hostname too.
+
+	$ sudo raspi-config
+	
+It will ask to reboot, select Yes and you should be presented with a graphical desktop when it has finished rebooting.
+
+Now to install the last few auxillary programs.
+
+	$ sudo apt-get -y install snmpd snmp-mibs-downloader whowatch iptraf zenmap
+	$ sudo apt-get clean
+	$ sudo apt-get autoclean
+
+I will pause here and make an image of the microSD card.  Another image will be made after all of the Software Defined Radio installation has been completed.
 
 2. To install dependencies :-
 
