@@ -3,11 +3,15 @@ Using the Raspberry Pi as an SDR
 
 NOTE - Make sure you have an actually sufficient power supply solution - this will sometimes draw over 1.2A, idle @ 700-800mA
 
+
 Hardware Required :-
 
 Raspberry Pi 2 or 3
+
 Realtek Based USB Tv Stick
+
 Decent power supply solution
+
 
 1. install Raspbian Lite
 
